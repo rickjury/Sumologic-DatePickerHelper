@@ -146,10 +146,10 @@ $dateTimePickerButton.add_Click({
             } 
         else {
               # write-host $fd.gettype()
-           $textBox.Text ="$($fd.Day)/$($fd.Month)/$($fd.Year) $($fd.Hour):$($fd.Minute.ToString("00")):$($fd.Second.ToString("00")) to $($td.Day)/$($td.Month)/$($td.Year) $($td.Hour):$($td.Minute.ToString("00")):$($td.Second.ToString("00"))"
-           write-host "mmdd=$($fd.Day)/$($fd.Month)/$($fd.Year) $($fd.Hour)):$($fd.Minute.ToString("00")):$($fd.Second.ToString("00")) to $($td.Day)/$($td.Month)/$($td.Year) $($td.Hour):$($td.Minute.ToString("00")):$($td.Second.ToString("00"))"
-	       $ddmmbox.Text="$($fd.Month)/$($fd.Day)/$($fd.Year) $($fd.Hour):$($fd.Minute.ToString("00")):$($fd.Second.ToString("00")) to $($td.Month)/$($td.Day)/$($td.Year) $($td.Hour):$($td.Minute.ToString("00")):$($td.Second.ToString("00"))"
-            write-host "ddmm=$($fd.Day)/$($fd.Month)/$($fd.Year) $($fd.Hour):$($fd.Minute.ToString("00")):$($fd.Second.ToString("00")) to $($td.Day)/$($td.Month)/$($td.Year) $($td.Hour):$($td.Minute.ToString("00")):$($td.Second.ToString("00"))"
+           $textBox.Text ="$($fd.Month.ToString("00"))/$($fd.Day.ToString("00"))/$($fd.Year) $($fd.Hour.ToString("00")):$($fd.Minute.ToString("00")):$($fd.Second.ToString("00")) to $($td.Month.ToString("00"))/$($td.Day.ToString("00"))/$($td.Year) $($td.Hour.ToString("00")):$($td.Minute.ToString("00")):$($td.Second.ToString("00"))"
+           write-host "mmdd=$($fd.Month.ToString("00"))/$($fd.Day.ToString("00"))/$($fd.Year) $($fd.Hour.ToString("00")):$($fd.Minute.ToString("00")):$($fd.Second.ToString("00")) to $($td.Month.ToString("00"))/$($td.Day.ToString("00"))/$($td.Year) $($td.Hour.ToString("00")):$($td.Minute.ToString("00")):$($td.Second.ToString("00"))"
+	       $ddmmbox.Text="$($fd.Day.ToString("00"))/$($fd.Month.ToString("00"))/$($fd.Year) $($fd.Hour.ToString("00")):$($fd.Minute.ToString("00")):$($fd.Second.ToString("00")) to $($td.Day.ToString("00"))/$($td.Month.ToString("00"))/$($td.Year) $($td.Hour.ToString("00")):$($td.Minute.ToString("00")):$($td.Second.ToString("00"))"
+            write-host "ddmm=$($fd.Day.ToString("00"))/$($fd.Month.ToString("00"))/$($fd.Year) $($fd.Hour.ToString("00")):$($fd.Minute.ToString("00")):$($fd.Second.ToString("00")) to $($td.Day.ToString("00"))/$($td.Month.ToString("00"))/$($td.Year) $($td.Hour.ToString("00")):$($td.Minute.ToString("00")):$($td.Second.ToString("00"))"
             $now=get-date
            
             $m1=[math]::round(($fd - $now).TotalMinutes)
